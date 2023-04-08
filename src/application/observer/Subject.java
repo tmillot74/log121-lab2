@@ -1,17 +1,34 @@
 package application.observer;
 
+import java.util.ArrayList;
+
 public class Subject {
-    private Observer observer;
+    private ArrayList<Observer> observer;
 
+    /**
+     * Attach an observer to the subject
+     *
+     * @param observer Observer
+     */
     public void attach(Observer observer) {
-        this.observer = observer;
+        this.observer.add(observer);
     }
 
+    /**
+     * Detach an observer from the subject
+     *
+     * @param observer Observer
+     */
     public void detach(Observer observer) {
-        this.observer = null;
+        this.observer.remove(observer);
     }
 
-    public void notify(Subject subject) {
-        observer.update(subject);
+    /**
+     * Notify all observers
+     */
+    public void notifyObserver() {
+        for (Observer observer : this.observer) {
+            observer.update();
+        }
     }
 }

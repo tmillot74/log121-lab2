@@ -13,6 +13,11 @@ public class UserCommands {
         this.commands = new LinkedList<ICommand>();
     }
 
+    public void addCommand(ICommand command) {
+        this.commands.add(command);
+        this.currentCommand++;
+    }
+
     public static UserCommands getInstance() {
         if (instance == null) {
             instance = new UserCommands();
@@ -20,10 +25,10 @@ public class UserCommands {
         return instance;
     }
 
-    public void executeCommand(ICommand command) {
+    public void executeCommand() {
         ICommand cmd;
         try {
-            cmd = this.commands.get(this.currentCommand + 1);
+            cmd = this.commands.get(this.currentCommand);
         } catch (IndexOutOfBoundsException e) {
             cmd = null;
         }
