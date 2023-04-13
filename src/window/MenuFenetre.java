@@ -29,10 +29,16 @@ public class MenuFenetre extends JMenuBar implements Serializable {
 
     PanneauPrincipal panImage = new PanneauPrincipal();
 
+    /**
+     * Constructor
+     */
     public MenuFenetre() {
         ajouterMenuFichier();
     }
 
+    /**
+     * Ajouter le menu Fichier
+     */
     private void ajouterMenuFichier() {
         JMenu menuFichier = new JMenu(MENU_FICHIER_TITRE);
         JMenuItem menuCharger = new JMenuItem(MENU_FICHIER_CHARGER);

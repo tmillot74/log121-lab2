@@ -15,6 +15,14 @@ public class PanneauDecorateur  extends JPanel {
     protected Point position = new Point(0, 0);
     int tailleX;
     int tailleY;
+
+    /**
+     * Constructor
+     * @param p Panneau
+     * @param posPanneau Point
+     * @param x int
+     * @param y int
+     */
     public PanneauDecorateur(Panneau p,Point posPanneau,int x,int y)
     {
         name=name+c;
@@ -34,6 +42,10 @@ public class PanneauDecorateur  extends JPanel {
         c++;
     }
 
+    /**
+     * Paint
+     * @param g Graphics
+     */
     @Override
     public void paint(Graphics g) {
         this.panel.paint(g);

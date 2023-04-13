@@ -24,11 +24,12 @@ public class Panneau extends JPanel{
         this.imageModel = imageModel;
     }
 
-    /*
-     * Constructeur de la classe panneau qui accepte:
-     * -Un point(position)
-     * -Un int(position en X)
-     * -Un int(position en Y)
+    /**
+     * Constructor
+     * @param p Point
+     * @param x int
+     * @param y int
+     * @param c Color
      */
     public Panneau(Point p, int x, int y, Color c) {
         setPosition(p);

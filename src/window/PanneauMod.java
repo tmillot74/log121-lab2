@@ -10,6 +10,14 @@ import java.awt.event.MouseEvent;
 
 public class PanneauMod extends PanneauDecorateur {
     private PanneauMod panel = this;
+
+    /**
+     * Constructor
+     * @param p Panneau
+     * @param posPanneau Point
+     * @param x int
+     * @param y int
+     */
     public PanneauMod(Panneau p, Point posPanneau, int x, int y) {
         super(p,posPanneau,x,y);
         this.addMouseListener(new MouseAdapter() {
@@ -45,6 +53,11 @@ public class PanneauMod extends PanneauDecorateur {
             }
         });
     }
+
+    /**
+     * Paint
+     * @param g Graphics
+     */
     @Override
     public void paint(Graphics g) {
         super.paint(g);

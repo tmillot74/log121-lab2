@@ -60,10 +60,18 @@ public class ImageModel {
     }
 
 
+    /**
+     * Zoom in
+     * @param factor double
+     */
     public void zoomIn(double factor) {
 
     }
 
+    /**
+     * Zoom out
+     * @param factor double
+     */
     public void zoomOut(double factor) {
 
     }

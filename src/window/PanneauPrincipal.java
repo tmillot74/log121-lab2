@@ -13,6 +13,9 @@ public class PanneauPrincipal extends JPanel {
     PanneauMod p2 = new PanneauMod(new Panneau(new Point(466, 0), 233, 700, Color.GRAY), new Point(466, 0), 233, 700);
     PanneauDecorateur p3 = new PanneauDecorateur(new Panneau(new Point(0, 0), 233, 700, Color.GRAY), new Point(0, 0), 233, 700);
 
+    /**
+     * Constructor
+     */
     public PanneauPrincipal() {
         setLayout(new GridLayout(1, 3, 4, 4));
         add(p3);
@@ -20,6 +23,10 @@ public class PanneauPrincipal extends JPanel {
         add(p1);
     }
 
+    /**
+     * Paint
+     * @param g Graphics
+     */
     @Override
     public void paint(Graphics g) {
         super.paint(g);

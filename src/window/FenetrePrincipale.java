@@ -19,6 +19,9 @@ public class FenetrePrincipale extends JFrame implements PropertyChangeListener,
     PanneauPrincipal panneauPrincipal = new PanneauPrincipal();
     MenuFenetre menuFenetre = new MenuFenetre();
 
+    /**
+     * Constructor
+     */
     public FenetrePrincipale() {
         add(panneauPrincipal);
         add(menuFenetre, BorderLayout.NORTH);
@@ -32,6 +35,10 @@ public class FenetrePrincipale extends JFrame implements PropertyChangeListener,
         setResizable(false);
     }
 
+    /**
+     * Main
+     * @param args String[]
+     */
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("TEST")) {
@@ -40,6 +47,9 @@ public class FenetrePrincipale extends JFrame implements PropertyChangeListener,
         }
     }
 
+    /**
+     * Update
+     */
     @Override
     public void update() {
 
